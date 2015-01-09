@@ -188,6 +188,23 @@ img {
     width: 1200px;
 }
 
+#slider2 {
+    overflow: hidden;
+    display: inline-block; 
+    background-color: #FFFFFF;
+    position: absolute;
+    /*overflow: none;*/
+    height: 610px;
+    white-space: nowrap;
+    padding:0; 
+    margin:0;
+    left: 0;
+    top:0;
+    width: 100%;
+    width: 1200px;
+}
+
+
 #slider ul {
   position: relative;
   margin: 0;
@@ -228,13 +245,13 @@ a.control_prev, a.control_next {
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  opacity: 0.2;
+  opacity: 0.1;
   cursor: pointer;
   display: block;
 }
 
 a.control_prev:hover, a.control_next:hover{
-  opacity: 0.8;
+  opacity: 0.4;
   display:block;
   -webkit-transition: all 0.2s ease;
 }
@@ -254,3 +271,22 @@ a.control_next {
   width: 160px;
   font-size: 18px;
 }
+
+/* Fade in Jquery Slider */
+
+.fadein { 
+    overflow: hidden;
+    display: inline-block; 
+    background-color: #FFFFFF;
+    position: absolute;
+    /*overflow: none;*/
+    height: 610px;
+    white-space: nowrap;
+    padding:0; 
+    margin:0;
+    left: 0;
+    top:0;
+    width: 100%;
+    width: 1200px;
+    }
+.fadein img { position:absolute; left:0; top:0; }

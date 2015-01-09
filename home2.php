@@ -15,25 +15,28 @@ $images_dir = 'home/';
 $image_files = get_files($images_dir);
 if(count($image_files)) {
 	$index = 0;
-	echo '<div id="slider">';
+	echo '<div id="slider2">';
+	echo "\r\n";
+/*
 	echo "\r\n";
 	echo '<a href="#" class="control_next"> > &nbsp;</a>';
 	echo "\r\n";
 	echo '<a href="#" class="control_prev"><</a>';
 	echo "\r\n";
-	echo '<ul>';
+	echo '<ul>';*/
 	foreach($image_files as $index=>$file) {
 		$index++;
 		$image = $images_dir.$file;
 
 		echo '<div class="slide-link">';
 		echo "\r\n";		
-		echo '<li><img src="',$image,'" /></li>';
+		//echo '<li><img src="',$image,'" /></li>';
+		echo '<img src="',$image,'" />';
 		echo "\r\n";
 		echo '</div>';
 		echo "\r\n";
 	}
-	echo '</ul>';
+	//echo '</ul>';
 	echo '</div>';
 	echo "\r\n";
 }

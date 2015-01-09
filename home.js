@@ -1,11 +1,36 @@
 jQuery(document).ready(function ($) {
 
-  $('#checkbox').change(function(){
-    setInterval(function () {
-        moveRight();
-    }, 3000);
-  });
-  
+    $('#checkbox').change(function(){
+       setInterval(function () {
+           moveRight();
+       }, 3000);
+     });
+      
+      $("#slider2 > div:gt(0)").hide();
+
+    setInterval(function() { 
+      $('#slider2 > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .delay(2000)
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .delay(2000)
+        .end()
+        .appendTo('#slideshow');
+    },  3000);
+
+    $(function(){
+        $('.fadein img:gt(0)').hide();
+        setInterval(function(){
+          $('.fadein :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('.fadein');}, 
+          3000);
+    });
+    
 	var slideCount = $('#slider ul li').length;
 	var slideWidth = $('#slider ul li').width();
 	var slideHeight = $('#slider ul li').height();
