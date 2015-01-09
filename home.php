@@ -1,7 +1,7 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>	
+
 <script type="text/JavaScript" src="home.js"></script> 	
 <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
@@ -72,11 +72,11 @@ function get_file_extension($file_name) {
 <div id="container3">
     <div class="box">
         <div id="logo" class="box">
-            <img src="/udp/images/logo.png"></img>
+            <img src="images/logo.png"></img>
         </div>
         <div id="menu" class="box">
             <ul>
-                <li><a href="#">fashion</a></li>
+                <li><a href="thumbnails.php">fashion</a></li>
                 <li><a href="#">food</a></li>
                 <li><a href="#">portrait</a></li>
                 <li><a href="#">film</a></li>
@@ -87,7 +87,7 @@ function get_file_extension($file_name) {
     </div>
     <div id="menu" class="box">
         <ul>
-            <li><a href="#" class="current">home</a></li>
+            <li><a href="home.php" class="current">home</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
         </ul>

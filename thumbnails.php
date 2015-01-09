@@ -107,7 +107,7 @@ function get_file_extension($file_name) {
 }
 ?>
 
-/* Navigation Elements Begin */
+<!-- /* Navigation Elements Begin */ -->
 
 <div id="container2">
 	<div id="display-mode">
@@ -121,11 +121,11 @@ function get_file_extension($file_name) {
 <div id="container3">
     <div class="box">
         <div id="logo" class="box">
-            <img src="/udp/images/logo.png"></img>
+            <img src="images/logo.png"></img>
         </div>
         <div id="menu" class="box">
             <ul>
-                <li><a href="#" class="current">fashion</a></li>
+                <li><a href="thumbnails.php" class="current">fashion</a></li>
                 <li><a href="#">food</a></li>
                 <li><a href="#">portrait</a></li>
                 <li><a href="#">film</a></li>
@@ -143,7 +143,7 @@ function get_file_extension($file_name) {
     </div>
     <div id="menu" class="box">
         <ul>
-            <li><a href="#">home</a></li>
+            <li><a href="home.php">home</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
         </ul>
