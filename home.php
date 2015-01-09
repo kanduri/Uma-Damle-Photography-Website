@@ -1,35 +1,41 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>	
+<script type="text/JavaScript" src="home.js"></script> 	
 <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 
 <?php
 /** SET NAME OF FOLDER HERE **/
-$images_dir = 'fashion/';
-$thumbs_dir = 'fashion-thumbs/';
-/*
-$images_dir = 'preload-images/';
-$thumbs_dir = 'preload-images-thumbs/';
-*/
+$images_dir = 'home/';
 
 /** generate photo gallery **/
 $image_files = get_files($images_dir);
 if(count($image_files)) {
 	$index = 0;
-	echo '<div id="container">';
+	echo '<div id="slider">';
 	echo "\r\n";
+
+	echo "\r\n";
+	echo '<a href="#" class="control_next"> > &nbsp;</a>';
+	echo "\r\n";
+	echo '<a href="#" class="control_prev"><</a>';
+	echo "\r\n";
+	echo '<ul>';
 	foreach($image_files as $index=>$file) {
 		$index++;
 		$image = $images_dir.$file;
+
 		echo '<div class="slide-link">';
-		echo "\r\n";
-		echo '<a href="',$images_dir.$file,'" rel="gallery"><img src="',$image,'" /></a>';
+		echo "\r\n";		
+		echo '<li><img src="',$image,'" /></li>';
 		echo "\r\n";
 		echo '</div>';
 		echo "\r\n";
-
 	}
+	echo '</ul>';
 	echo '</div>';
 	echo "\r\n";
 }
@@ -62,13 +68,6 @@ function get_file_extension($file_name) {
 /* Navigation Elements Begin */
 
 <div id="container2">
-	<div id="display-mode">
-		<ul>
-			<li><a href="slideview.php" class="current">Slideview</a></li>
-			<li> | </li>
-			<li><a href="thumbnails.php">Thumbnails</a></li>
-		</ul>
-	</div>
 </div>
 <div id="container3">
     <div class="box">
@@ -77,7 +76,7 @@ function get_file_extension($file_name) {
         </div>
         <div id="menu" class="box">
             <ul>
-                <li><a href="#" class="current">fashion</a></li>
+                <li><a href="#">fashion</a></li>
                 <li><a href="#">food</a></li>
                 <li><a href="#">portrait</a></li>
                 <li><a href="#">film</a></li>
@@ -86,21 +85,14 @@ function get_file_extension($file_name) {
             </ul>
         </div>
     </div>
-    <div id="description" class="box">
-        <p>
-            Minimalist Comic Book Wallpapers </br>
-            View more from this project on <a href="#">Behance</a></br>
-            View film from this project on <a href="#">Vimeo</a>
-        </p>    
-    </div>
     <div id="menu" class="box">
         <ul>
-            <li><a href="#">home</a></li>
+            <li><a href="#" class="current">home</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
         </ul>
     </div>    
-    <span class="stretch"></span>
+    
 </div>
 </body>
 </html>

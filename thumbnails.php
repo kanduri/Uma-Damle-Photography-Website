@@ -5,7 +5,7 @@
 <body>
 
 <?php
-/** settings **/
+/** SET NAME OF FOLDER HERE **/
 $images_dir = 'fashion/';
 $thumbs_dir = 'fashion-thumbs/';
 /*
@@ -121,7 +121,7 @@ function get_file_extension($file_name) {
 <div id="container3">
     <div class="box">
         <div id="logo" class="box">
-            <img src="/images/logo.png"></img>
+            <img src="/udp/images/logo.png"></img>
         </div>
         <div id="menu" class="box">
             <ul>
