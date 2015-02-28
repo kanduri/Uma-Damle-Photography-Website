@@ -1,7 +1,7 @@
 <?php
 /** SET NAME OF FOLDER/PAGE HERE **/
-$page_title = 'Fashion::Uma Damle Photography';
-$page_name = 'fashion';
+$page_title = 'Wedding';
+$page_name = 'wedding';
 include 'header.php';
 include 'slideview_core.php';
 ?>

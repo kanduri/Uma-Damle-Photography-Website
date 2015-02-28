@@ -4,8 +4,10 @@
 
 <script type="text/JavaScript" src="home.js"></script> 	
 <link rel="stylesheet" href="style.css" type="text/css"/>
+<title>Uma Damle Photography</title>
+
 </head>
-<body>
+<body class="home">
 
 <?php
 /** SET NAME OF FOLDER HERE **/
@@ -56,7 +58,5 @@ function get_file_extension($file_name) {
 
 <!-- /* Navigation Elements Begin */ -->
 
-<div id="container2">
-</div>
 
 <?php include 'navigation.php';?>

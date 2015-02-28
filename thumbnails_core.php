@@ -1,7 +1,8 @@
 
 <?php
 $images_dir = $page_name.'/';
-$thumbs_dir = $page_name.'-thumbs/';
+//$thumbs_dir = $page_name.'-thumbs/';
+$thumbs_dir = 'thumbs/'.$page_name.'/';
 $slideview_page = $page_name.'_slideview.php';
 $thumbnail_page = $page_name.'_thumbnails.php';
 echo '<body class="',$page_name,'">';

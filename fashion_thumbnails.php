@@ -1,11 +1,8 @@
-<html>
-<head>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-
 <?php
-/** SET NAME OF THE PAGE HERE **/
+/** SET NAME OF FOLDER/PAGE HERE **/
+$page_title = 'Fashion';
 $page_name = 'fashion';
+include 'header.php';
 include 'thumbnails_core.php';
 ?>
 
