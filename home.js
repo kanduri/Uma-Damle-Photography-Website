@@ -27,10 +27,11 @@ jQuery(document).ready(function ($) {
         setInterval(function(){
           $('.fadein :first-child').fadeOut()
              .next('img').fadeIn()
+             .delay(5000)
              .end().appendTo('.fadein');}, 
           3000);
     });
-    
+
 	var slideCount = $('#slider ul li').length;
 	var slideWidth = $('#slider ul li').width();
 	var slideHeight = $('#slider ul li').height();

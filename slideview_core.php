@@ -1,15 +1,9 @@
-<html>
-<head>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-
 <?php
-/** SET NAME OF FOLDER HERE **/
-$page_name = 'fashion';
+
 $images_dir = $page_name.'/';
 $thumbs_dir = $page_name.'-thumbs/';
-$slideview_page = 'slideview.php';
-$thumbnail_page = 'thumbnails.php';
+$slideview_page = $page_name.'_slideview.php';
+$thumbnail_page = $page_name.'_thumbnails.php';
 echo '<body class="',$page_name,'">';
 
 /** generate photo gallery **/
@@ -69,6 +63,3 @@ function get_file_extension($file_name) {
 	return substr(strrchr($file_name,'.'),1);
 }
 ?>
-
-<!-- /* Navigation Elements Begin */ -->
-<?php include 'navigation.php';?>

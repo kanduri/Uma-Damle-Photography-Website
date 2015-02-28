@@ -1,17 +1,11 @@
-<html>
-<head>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-<body>
 
 <?php
-/** SET NAME OF FOLDER HERE **/
-$images_dir = 'fashion/';
-$thumbs_dir = 'fashion-thumbs/';
-/*
-$images_dir = 'preload-images/';
-$thumbs_dir = 'preload-images-thumbs/';
-*/
+$images_dir = $page_name.'/';
+$thumbs_dir = $page_name.'-thumbs/';
+$slideview_page = $page_name.'_slideview.php';
+$thumbnail_page = $page_name.'_thumbnails.php';
+echo '<body class="',$page_name,'">';
+
 $thumbs_width = 360;
 $num_col = 3;
 
@@ -34,7 +28,10 @@ if(count($image_files)) {
 				make_thumb($images_dir.$file,$thumbnail_image,$thumbs_width);
 			}
 		}
-		echo '<a href="',$images_dir.$file,'" class="photo-link" rel="gallery"><img src="',$thumbnail_image,'" /></a>';
+		//For linking Directly to file
+		//echo '<a href="',$images_dir.$file,'" class="photo-link" rel="gallery"><img src="',$thumbnail_image,'" /></a>';
+		//For linking to the image in the slideview mode
+		echo '<a href="',$slideview_page,'#',$index,'" class="photo-link" rel="gallery"><img src="',$thumbnail_image,'" /></a>';
 		echo "\r\n";
 
 		if($index % $images_per_row == 0) { 
@@ -52,6 +49,17 @@ if(count($image_files)) {
 	echo "\r\n";
 	echo '</div>';
 	echo "\r\n";
+
+	echo '<div id="container2">
+	<div id="display-mode">
+		<ul>
+			<li><a href="',$slideview_page,'">Slideview</a></li>
+			<li> | </li>
+			<li><a href="',$thumbnail_page,'" class="current">Thumbnails</a></li>
+		</ul>
+	</div>
+</div>
+';
 
 }
 else {
@@ -106,49 +114,3 @@ function get_file_extension($file_name) {
 	return substr(strrchr($file_name,'.'),1);
 }
 ?>
-
-<!-- /* Navigation Elements Begin */ -->
-
-<div id="container2">
-	<div id="display-mode">
-		<ul>
-			<li><a href="slideview.php">Slideview</a></li>
-			<li> | </li>
-			<li><a href="thumbnails.php" class="current">Thumbnails</a></li>
-		</ul>
-	</div>
-</div>
-<div id="container3">
-    <div class="box">
-        <div id="logo" class="box">
-            <img src="images/logo.png"></img>
-        </div>
-        <div id="menu" class="box">
-            <ul>
-                <li><a href="thumbnails.php" class="current">fashion</a></li>
-                <li><a href="#">food</a></li>
-                <li><a href="#">portrait</a></li>
-                <li><a href="#">film</a></li>
-                <li><a href="#">wedding</a></li>
-
-            </ul>
-        </div>
-    </div>
-    <div id="description" class="box">
-        <p>
-            Minimalist Comic Book Wallpapers </br>
-            View more from this project on <a href="#">Behance</a></br>
-            View film from this project on <a href="#">Vimeo</a>
-        </p>    
-    </div>
-    <div id="menu" class="box">
-        <ul>
-            <li><a href="home.php">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
-    </div>    
-    <span class="stretch"></span>
-</div>
-</body>
-</html>

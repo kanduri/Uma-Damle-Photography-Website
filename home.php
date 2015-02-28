@@ -15,25 +15,16 @@ $images_dir = 'home/';
 $image_files = get_files($images_dir);
 if(count($image_files)) {
 	$index = 0;
-	echo '<div id="slider">';
+	echo '<div class="fadein">';
 	echo "\r\n";
-	echo '<a href="#" class="control_next"> > &nbsp;</a>';
-	echo "\r\n";
-	echo '<a href="#" class="control_prev"><</a>';
-	echo "\r\n";
-	echo '<ul>';
+
 	foreach($image_files as $index=>$file) {
 		$index++;
 		$image = $images_dir.$file;
 
-		echo '<div class="slide-link">';
-		echo "\r\n";		
-		echo '<li><img src="',$image,'" /></li>';
-		echo "\r\n";
-		echo '</div>';
-		echo "\r\n";
+		echo '<img src="',$image,'" />';
+
 	}
-	echo '</ul>';
 	echo '</div>';
 	echo "\r\n";
 }
@@ -67,30 +58,5 @@ function get_file_extension($file_name) {
 
 <div id="container2">
 </div>
-<div id="container3">
-    <div class="box">
-        <div id="logo" class="box">
-            <img src="images/logo.png"></img>
-        </div>
-        <div id="menu" class="box">
-            <ul>
-                <li><a href="thumbnails.php">fashion</a></li>
-                <li><a href="#">food</a></li>
-                <li><a href="#">portrait</a></li>
-                <li><a href="#">film</a></li>
-                <li><a href="#">wedding</a></li>
 
-            </ul>
-        </div>
-    </div>
-    <div id="menu" class="box">
-        <ul>
-            <li><a href="home.php" class="current">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
-    </div>    
-    
-</div>
-</body>
-</html>
+<?php include 'navigation.php';?>

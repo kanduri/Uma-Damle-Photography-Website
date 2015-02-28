@@ -81,6 +81,13 @@ img {
     font-weight:bold;
 }
 
+body.fashion a.fashion, body.wedding a.wedding, body.food a.food, body.portrait a.portrait, body.film a.film {
+
+    border-bottom:2px solid #3fc2f3;
+    font-weight:bold;
+
+}
+
 #display-mode {
     height:18px;
     font-size: 12px;
