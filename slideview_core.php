@@ -4,6 +4,16 @@ $images_dir = $page_name.'/';
 $thumbs_dir = 'thumbs/'.$page_name.'/';
 $slideview_page = $page_name.'_slideview.php';
 $thumbnail_page = $page_name.'_thumbnails.php';
+
+echo '
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery.unveil.js"></script>
+<script>
+    $(function() {
+        $("li img").unveil(300);
+    });
+</script>';
+
 echo '<body class="',$page_name,'">';
 
 /** generate photo gallery **/
